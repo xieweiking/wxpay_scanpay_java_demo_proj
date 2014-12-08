@@ -1,0 +1,14 @@
+<xml>
+    <!--
+    这里模拟撤销失败
+    -->
+    <return_code><![CDATA[FAIL]]></return_code>
+    <return_msg><![CDATA[REVERSE NOT OK]]></return_msg>
+    <appid><![CDATA[wxf5b5e87a6a0fde94]]></appid>
+    <mch_id><![CDATA[10000097]]></mch_id>
+    <sub_mch_id><![CDATA[]]></sub_mch_id>
+    <nonce_str><![CDATA[sFa1zn1B3AdSyD7v]]></nonce_str>
+    <sign><![CDATA[5A5BF0C768F01D2878CDEFA163CAE29C]]></sign>
+    <result_code><![CDATA[FAIL]]></result_code>
+    <recall><![CDATA[N]]></recall>
+</xml>

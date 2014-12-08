@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="wxpay_scanpay_java_sdk">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/wxpay_scanpay_java_sdk.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../wxpay_scanpay_java_sdk_proj/src/main/java" />
+    </SOURCES>
+  </library>
+</component>
