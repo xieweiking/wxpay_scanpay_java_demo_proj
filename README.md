@@ -188,6 +188,35 @@ public String getAuthCode(){
 
 （以上最佳实践已经在SDK的ScanPayBusiness里面封装好了）
 
+## 支付业务逻辑分支处理最佳实践  
+![img](https://raw.githubusercontent.com/grz/wxpay_scanpay_java_demo_proj/master/docs/asset/scanpaybusiness_resultlistener.png "被扫支付最佳实践")    
+
+ScanPayBusiness里面的ResultListener接口定义了支付流程中可能走到的8个分支，分别是：  
+```java
+ public interface ResultListener {
+        //API返回ReturnCode不合法，支付请求逻辑错误，请仔细检测传过去的每一个参数是否合法，或是看API能否被正常访问
+        void onFailByReturnCodeError(ScanPayResData scanPayResData);
+        //API返回ReturnCode为FAIL，支付API系统返回失败，请检测Post给API的数据是否规范合法
+        void onFailByReturnCodeFail(ScanPayResData scanPayResData);
+        //支付请求API返回的数据签名验证失败，有可能数据被篡改了
+        void onFailBySignInvalid(ScanPayResData scanPayResData);
+        //用户用来支付的二维码已经过期，提示收银员重新扫一下用户微信“刷卡”里面的二维码
+        void onFailByAuthCodeExpire(ScanPayResData scanPayResData);
+        //授权码无效，提示用户刷新一维码/二维码，之后重新扫码支付"
+        void onFailByAuthCodeInvalid(ScanPayResData scanPayResData);
+        //用户余额不足，换其他卡支付或是用现金支付
+        void onFailByMoneyNotEnough(ScanPayResData scanPayResData);
+        //支付失败
+        void onFail(ScanPayResData scanPayResData);
+        //支付成功
+        void onSuccess(ScanPayResData scanPayResData);
+    }
+```
+
+Demo里面用到的DefaultScanPayBusinessResultListener就是实现了以上这8个接口。
+这里有几点处理建议：  
+1. onFailByReturnCodeError、onFailByReturnCodeFail、onFailBySignInvalid这3种属于程序逻辑问题，建议商户自己做好日志监控，发现问题要及时让工程师进行定位处理；
+2. onFailByAuthCodeExpire、onFailByAuthCodeInvalid、onFailByMoneyNotEnough这三种属于用户自身的问题，建议商户把具体出错信息提示给用户，指导用户进行下一步操作。（具体出错信息可以通过scanPayResData.getErr_code_des()获取得到）
 
 ## 商户系统接入SDK最佳实践
 1. 生成一个新的订单out_trade_no
