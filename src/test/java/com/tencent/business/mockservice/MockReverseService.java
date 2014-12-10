@@ -13,7 +13,8 @@ public class MockReverseService extends ReverseService{
 
     private String localResponseStringPath = "";
 
-    public MockReverseService(String localPath){
+    public MockReverseService(String localPath) throws IllegalAccessException, ClassNotFoundException, InstantiationException {
+        super();
         localResponseStringPath = localPath;
     }
 

@@ -20,7 +20,7 @@
     <property name="basedir" value="C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj"/>
     <property name="java.endorsed.dirs" value="C:\Program Files (x86)\Java\jdk1.6.0_20\jre\lib\endorsed"/>
     <property name="os.arch" value="x86"/>
-    <property name="surefire.real.class.path" value="C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\target\surefire\surefirebooter314211828938854618.jar"/>
+    <property name="surefire.real.class.path" value="C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\target\surefire\surefirebooter5225741173710815688.jar"/>
     <property name="java.io.tmpdir" value="C:\Users\rizenguo\AppData\Local\Temp\"/>
     <property name="line.separator" value="
 "/>
@@ -61,5 +61,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
   </properties>
-  <testcase time="6.567" classname="com.tencent.common.report.service.ReportServiceTest" name="testRequest"/>
+  <testcase time="6.566" classname="com.tencent.common.report.service.ReportServiceTest" name="testRequest"/>
 </testsuite>

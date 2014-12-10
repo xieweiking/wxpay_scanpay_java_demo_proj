@@ -13,7 +13,8 @@ public class MockRefundQueryService extends RefundQueryService{
 
     private String localResponseStringPath = "";
 
-    public MockRefundQueryService(String localPath){
+    public MockRefundQueryService(String localPath) throws IllegalAccessException, ClassNotFoundException, InstantiationException {
+        super();
         localResponseStringPath = localPath;
     }
 

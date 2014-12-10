@@ -1,7 +1,7 @@
 # 微信支付之“被扫支付”JavaDemo
 
 欢迎大家使用这个Demo，希望这个Demo可以大大提升大家的效率，大家遇到问题可以第一时间发邮件给到以下地址（grz@grzcn.com）或是提交你宝贵的Pull Request。  
-该Demo用到了“被扫支付SDK”，SDK的详细说明请看<a href="https://github.com/grz/wxpay_scanpay_java_sdk" title="被扫支付SDK" target="_blank">这里</a>
+该Demo用到了“被扫支付SDK”，SDK的详细说明请看<a href="https://github.com/grz/wxpay_scanpay_java_sdk_proj" title="被扫支付SDK" target="_blank">这里</a>
 
 ## 快速上手，使用SDK只需三步即可接入“被扫支付”  
 ##### 第一步，初始化SDK  
@@ -79,8 +79,9 @@
 2. [Demo依赖的配置项](#user-content-demo依赖的配置项)
 3. [Demo需要商户自己实现的IBridge](#user-content-demo需要商户自己实现的ibridge)
 
-## 商户系统接入最佳实践
+## 最佳实践
 1. [被扫支付业务流程最佳实践](#user-content-被扫支付业务流程最佳实践)  
+2. [支付业务逻辑分支处理最佳实践](#user-content-支付业务逻辑分支处理最佳实践)
 2. [商户系统接入SDK最佳实践](#user-content-商户系统接入sdk最佳实践)
 3. [商户系统部署最佳实践](#user-content-商户系统部署最佳实践)
 
@@ -92,7 +93,7 @@
 ## Demo包含的内容
 
 
-Demo里面需要大家关注的主要有两个地方：  
+Demo里面需要大家关注的主要有三个地方：  
 
 1. 四个业务Demo，位于src/main/java/com/tencent/business/目录里面，这些demo将会教大家如何调用SDK里面封装好的业务逻辑。
 
@@ -215,7 +216,7 @@ ScanPayBusiness里面的ResultListener接口定义了支付流程中可能走到
 
 Demo里面用到的DefaultScanPayBusinessResultListener就是实现了以上这8个接口。
 这里有几点处理建议：  
-1. onFailByReturnCodeError、onFailByReturnCodeFail、onFailBySignInvalid这3种属于程序逻辑问题，建议商户自己做好日志监控，发现问题要及时让工程师进行定位处理；
+1. onFailByReturnCodeError、onFailByReturnCodeFail、onFailBySignInvalid这3种属于程序逻辑问题，建议商户自己做好日志监控，发现问题要及时让工程师进行定位处理；  
 2. onFailByAuthCodeExpire、onFailByAuthCodeInvalid、onFailByMoneyNotEnough这三种属于用户自身的问题，建议商户把具体出错信息提示给用户，指导用户进行下一步操作。（具体出错信息可以通过scanPayResData.getErr_code_des()获取得到）
 
 ## 商户系统接入SDK最佳实践
@@ -233,6 +234,17 @@ Demo里面用到的DefaultScanPayBusinessResultListener就是实现了以上这8
 2. 商户系统跟SDK的对接主要就是实现IBridge里面的接口；
 3. 从本demo里面有JUnit单元测试用例，商户开发者可以参考下这个示例；
 ![img](https://raw.githubusercontent.com/grz/wxpay_scanpay_java_demo_proj/master/docs/asset/system_structure.png "商户系统部署最佳实践")
+
+## 高级自定义：使用自己的Https请求器  
+可能有些商户自己系统里面已经拥有自己封装得很完善的Https请求器了，想让SDK的服务统一都走自己的Https请求器来发起请求的话，这里提供了一个配置项可以实现这个功能：
+
+```java
+ //自定义底层的HttpsRequest
+    Configure.setHttpsRequestClassName("com.tencent.httpsrequest.HttpsRequestForTest");
+```
+
+温馨提示：自己实现的Https请求器必须实现IServiceRequest这个接口，可以参考SDK里面的HttpRequest的实现。
+
 
 
 ## 调用被扫支付API的协议规则  

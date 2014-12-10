@@ -29,7 +29,7 @@ public class DownloadBillBusinessTest {
     private static DefaultDownloadBillBusinessResultListener listener;
 
     @BeforeClass
-    public static void beforeClass() {
+    public static void beforeClass() throws IllegalAccessException, InstantiationException, ClassNotFoundException {
         BeforeTest.initSDK();
         downloadBillBusiness = new DownloadBillBusiness();
         bridgeForBillBusinessTest = new BridgeForBillBusinessTest();

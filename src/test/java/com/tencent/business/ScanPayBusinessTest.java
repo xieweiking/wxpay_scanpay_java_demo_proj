@@ -5,6 +5,7 @@ import com.tencent.bridge.IBridge;
 import com.tencent.business.mockservice.MockReverseService;
 import com.tencent.business.mockservice.MockScanPayQueryService;
 import com.tencent.business.mockservice.MockScanPayService;
+import com.tencent.common.Configure;
 import com.tencent.listener.DefaultScanPayBusinessResultListener;
 import com.tencent.protocol.pay_protocol.ScanPayReqData;
 import com.tencent.business.bridgefortest.BridgeForScanPayBusinessTest;
@@ -39,9 +40,11 @@ public class ScanPayBusinessTest {
     private static DefaultScanPayBusinessResultListener resultListener;
 
     @BeforeClass
-    public static void beforeClass() {
+    public static void beforeClass() throws IllegalAccessException, InstantiationException, ClassNotFoundException {
 
         BeforeTest.initSDK();
+        //自定义底层的HttpsRequest
+        Configure.setHttpsRequestClassName("com.tencent.httpsrequest.HttpsRequestForTest");
 
         scanPayBusiness = new ScanPayBusiness();
         bridgeForScanPayBusinessTest = new BridgeForScanPayBusinessTest();

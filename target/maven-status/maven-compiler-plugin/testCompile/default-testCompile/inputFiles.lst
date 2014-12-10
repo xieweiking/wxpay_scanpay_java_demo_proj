@@ -1,4 +1,5 @@
 C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\src\test\java\com\tencent\business\mockservice\MockScanPayService.java
+C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\src\test\java\com\tencent\httpsrequest\HttpsRequestForTest.java
 C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\src\test\java\com\tencent\business\bridgefortest\BridgeForBillBusinessTest.java
 C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\src\test\java\com\tencent\business\bridgefortest\BridgeForRefundQueryBusinessTest.java
 C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\src\test\java\com\tencent\business\bridgefortest\BridgeForScanPayBusinessCase2Test.java
@@ -9,8 +10,8 @@ C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\src\test\java\com\tencent\business\b
 C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\src\test\java\com\tencent\BeforeTest.java
 C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\src\test\java\com\tencent\business\mockservice\MockReverseService.java
 C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\src\test\java\com\tencent\business\RefundQueryBusinessTest.java
-C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\src\test\java\com\tencent\common\report\service\ReportServiceTest.java
 C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\src\test\java\com\tencent\business\RefundBusinessTest.java
+C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\src\test\java\com\tencent\common\report\service\ReportServiceTest.java
 C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\src\test\java\com\tencent\business\mockservice\MockRefundQueryService.java
 C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\src\test\java\com\tencent\business\bridgefortest\BridgeForRefundBusinessTest.java
 C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\src\test\java\com\tencent\business\ScanPayBusinessTest.java

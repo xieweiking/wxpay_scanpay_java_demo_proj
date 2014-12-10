@@ -28,7 +28,7 @@ public class RefundBusinessTest {
     private static DefaultRefundBusinessResultListener listener;
 
     @BeforeClass
-    public static void beforeClass() {
+    public static void beforeClass() throws IllegalAccessException, InstantiationException, ClassNotFoundException {
         BeforeTest.initSDK();
 
         refundBusiness = new RefundBusiness();

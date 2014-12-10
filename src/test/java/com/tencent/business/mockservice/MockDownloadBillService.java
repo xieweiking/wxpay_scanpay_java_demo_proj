@@ -13,7 +13,8 @@ public class MockDownloadBillService extends DownloadBillService{
 
     private String localResponseStringPath = "";
 
-    public MockDownloadBillService(String localPath){
+    public MockDownloadBillService(String localPath) throws IllegalAccessException, ClassNotFoundException, InstantiationException {
+        super();
         localResponseStringPath = localPath;
     }
 

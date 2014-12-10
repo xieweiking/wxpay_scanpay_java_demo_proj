@@ -27,7 +27,7 @@ public class RefundQueryBusinessTest {
     private static DefaultRefundQueryBusinessResultListener listener;
 
     @BeforeClass
-    public static void beforeClass() {
+    public static void beforeClass() throws IllegalAccessException, InstantiationException, ClassNotFoundException {
         BeforeTest.initSDK();
         refundQueryBusiness = new RefundQueryBusiness();
         bridgeForRefundQueryBusinessTest = new BridgeForRefundQueryBusinessTest();

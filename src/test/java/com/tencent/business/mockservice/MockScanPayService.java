@@ -19,7 +19,8 @@ public class MockScanPayService extends ScanPayService{
 
     private String localResponseStringPath = "";
 
-    public MockScanPayService(String localPath){
+    public MockScanPayService(String localPath) throws IllegalAccessException, ClassNotFoundException, InstantiationException {
+        super();
         localResponseStringPath = localPath;
     }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.053" errors="0" skipped="0" tests="7" name="com.tencent.business.RefundQueryBusinessTest">
+<testsuite failures="0" time="0.243" errors="0" skipped="0" tests="7" name="com.tencent.business.RefundQueryBusinessTest">
   <properties>
     <property name="idea.version" value="14.0.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -20,7 +20,7 @@
     <property name="basedir" value="C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj"/>
     <property name="java.endorsed.dirs" value="C:\Program Files (x86)\Java\jdk1.6.0_20\jre\lib\endorsed"/>
     <property name="os.arch" value="x86"/>
-    <property name="surefire.real.class.path" value="C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\target\surefire\surefirebooter314211828938854618.jar"/>
+    <property name="surefire.real.class.path" value="C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\target\surefire\surefirebooter5225741173710815688.jar"/>
     <property name="java.io.tmpdir" value="C:\Users\rizenguo\AppData\Local\Temp\"/>
     <property name="line.separator" value="
 "/>
@@ -61,11 +61,11 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
   </properties>
-  <testcase time="0.004" classname="com.tencent.business.RefundQueryBusinessTest" name="testCase1"/>
-  <testcase time="0.002" classname="com.tencent.business.RefundQueryBusinessTest" name="testCase2"/>
-  <testcase time="0.005" classname="com.tencent.business.RefundQueryBusinessTest" name="testCase3"/>
-  <testcase time="0.005" classname="com.tencent.business.RefundQueryBusinessTest" name="testCase4"/>
-  <testcase time="0.008" classname="com.tencent.business.RefundQueryBusinessTest" name="testCase5"/>
-  <testcase time="0.01" classname="com.tencent.business.RefundQueryBusinessTest" name="testRefundQueryResult"/>
-  <testcase time="0.012" classname="com.tencent.business.RefundQueryBusinessTest" name="testRefundQueryResult2"/>
+  <testcase time="0.026" classname="com.tencent.business.RefundQueryBusinessTest" name="testCase1"/>
+  <testcase time="0.032" classname="com.tencent.business.RefundQueryBusinessTest" name="testCase2"/>
+  <testcase time="0.032" classname="com.tencent.business.RefundQueryBusinessTest" name="testCase3"/>
+  <testcase time="0.028" classname="com.tencent.business.RefundQueryBusinessTest" name="testCase4"/>
+  <testcase time="0.035" classname="com.tencent.business.RefundQueryBusinessTest" name="testCase5"/>
+  <testcase time="0.033" classname="com.tencent.business.RefundQueryBusinessTest" name="testRefundQueryResult"/>
+  <testcase time="0.037" classname="com.tencent.business.RefundQueryBusinessTest" name="testRefundQueryResult2"/>
 </testsuite>
