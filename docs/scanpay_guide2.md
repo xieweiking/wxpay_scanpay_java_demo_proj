@@ -31,7 +31,7 @@ API是微信支付后台提供的最基础的最原始的形式，API定义了�
 3. 随机数生成算法SDK自动帮你搞定，自动帮你调用，让你几乎完全没有感知到它的存在；
 4. HTTPS请求器的封装SDK帮你搞定，你只需要轻松调用即可；  
 
-如何用好微信支付SDK，请详细修炼<a href="https://github.com/grz/wxpay_scanpay_java_sdk" target="_blank">《微信支付SDK说明文档》</a>
+如何用好微信支付SDK，请详细修炼<a href="https://github.com/grz/wxpay_scanpay_java_sdk_proj" target="_blank">《微信支付SDK说明文档》</a>
 
 
 #### 高级篇：《Demo文档》修炼  
@@ -52,10 +52,11 @@ API是微信支付后台提供的最基础的最原始的形式，API定义了�
 1. 精通“<a href="https://github.com/grz/wxpay_scanpay_java_demo_proj#user-content-%E8%A2%AB%E6%89%AB%E6%94%AF%E4%BB%98%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5" target="_blank">被扫支付业务流程最佳实践</a>”  
 2. 精通“<a href="https://github.com/grz/wxpay_scanpay_java_demo_proj#user-content-%E6%94%AF%E4%BB%98%E4%B8%9A%E5%8A%A1%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF%E5%A4%84%E7%90%86%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5" target="_blank">支付业务逻辑分支处理最佳实践</a>”  
 3. 精通“<a href="https://github.com/grz/wxpay_scanpay_java_demo_proj#user-content-%E5%95%86%E6%88%B7%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%85%A5sdk%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5" target="_blank">商户系统接入SDK最佳实践</a>”  
-4. 精通“<a href="https://github.com/grz/wxpay_scanpay_java_demo_proj#user-content-%E5%95%86%E6%88%B7%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5" target="_blank">商户系统部署最佳实践</a>”  
-5. 精通“<a href="https://github.com/grz/wxpay_scanpay_java_demo_proj#user-content-%E8%A2%AB%E6%89%AB%E6%94%AF%E4%BB%98%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5" target="_blank">高级自定义：使用自己的Https请求器</a>”
+4. 精通“<a href="https://github.com/grz/wxpay_scanpay_java_demo_proj#user-content-%E5%95%86%E6%88%B7%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5" target="_blank">商户系统部署最佳实践</a>”    
 
-
+除了精通以上的最佳实践外，还需要掌握Demo里面的高级自定义功能：
+1. <a href="https://github.com/grz/wxpay_scanpay_java_demo_proj#user-content-%E9%AB%98%E7%BA%A7%E8%87%AA%E5%AE%9A%E4%B9%891%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9F%A5%E8%AF%A2%E6%B5%81%E7%A8%8B%E5%92%8C%E6%92%A4%E9%94%80%E6%B5%81%E7%A8%8B" target="_blank">自定义查询流程和撤销流程</a>
+2. <a href="https://github.com/grz/wxpay_scanpay_java_demo_proj#user-content-%E9%AB%98%E7%BA%A7%E8%87%AA%E5%AE%9A%E4%B9%892%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B7%B1%E7%9A%84https%E8%AF%B7%E6%B1%82%E5%99%A8" target="_blank">使用自己的Https请求器</a>
 
 ##### 读完Demo文档之后基本上可以很快完成接入，但还有一些相关知识需要研读，它们是：
 1. 《HTTPS服务器配置指南》
