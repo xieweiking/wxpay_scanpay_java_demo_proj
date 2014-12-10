@@ -85,6 +85,10 @@
 2. [商户系统接入SDK最佳实践](#user-content-商户系统接入sdk最佳实践)
 3. [商户系统部署最佳实践](#user-content-商户系统部署最佳实践)
 
+## 高级自定义  
+1. [自定义查询流程和撤销流程](#user-content-高级自定义：1）自定义查询流程和撤销流程) 
+2. [使用自己的Https请求器](#user-content-高级自定义：2）使用自己的Https请求器) 
+
 ## “被扫支付”高级知识  
 1. [调用被扫支付API的协议规则](#user-content-调用被扫支付api的协议规则)
 2. [支付验证密码规则](#user-content-支付验证密码规则)
@@ -172,17 +176,6 @@ public String getAuthCode(){
 3. 需输入密码：走查单流程，如果查询了一定时间还是没有成功则当失败处理，直接走撤销
 4. 扣款未知失败：先走查单流程，如果查询了一定时间还是没有成功则当失败处理，直接走撤销
 
-商户可以根据自己的实际需要来配置其中的“查询流程”的“查询次数”和“查询间隔”；“撤销流程”的“查询间隔”，例如：
-
-```java
-    //自定义调用查询接口的间隔
-    scanPayBusiness.setWaitingTimeBeforePayQueryServiceInvoked(3000);
-    //自定义调用查询接口的次数
-    scanPayBusiness.setPayQueryLoopInvokedCount(1);
-    //自定义调用撤销接口的间隔
-    scanPayBusiness.setWaitingTimeBeforeReverseServiceInvoked(2000);
-```
-  
 两个关键流程解释：  
 1. 有限次查询流程：这里会根据设定的“查询次数”（用户可以自定义）和“查询间隔”来进行轮询，超过了查询次数之后还是没有查询到“支付成功”的情况会自动转入“撤销流程”
 2. 撤销流程：这里会根据设定的“查询间隔”进行不停地轮询撤销API，API会通过recall字段来告诉商户侧需不需要继续轮询，如果“recall=Y”或是“撤销结果成功”都表示不需要再轮询了，然后到达“支付失败”的最终状态。
@@ -235,7 +228,21 @@ Demo里面用到的DefaultScanPayBusinessResultListener就是实现了以上这8
 3. 从本demo里面有JUnit单元测试用例，商户开发者可以参考下这个示例；
 ![img](https://raw.githubusercontent.com/grz/wxpay_scanpay_java_demo_proj/master/docs/asset/system_structure.png "商户系统部署最佳实践")
 
-## 高级自定义：使用自己的Https请求器  
+## 高级自定义：1）自定义查询流程和撤销流程 
+
+商户可以根据自己的实际需要来配置[支付业务流程](#user-content-被扫支付业务流程最佳实践)中的“查询流程”的“查询次数”和“查询间隔”；“撤销流程”的“查询间隔”，例如：
+
+```java
+    //自定义调用查询接口的间隔
+    scanPayBusiness.setWaitingTimeBeforePayQueryServiceInvoked(3000);
+    //自定义调用查询接口的次数
+    scanPayBusiness.setPayQueryLoopInvokedCount(1);
+    //自定义调用撤销接口的间隔
+    scanPayBusiness.setWaitingTimeBeforeReverseServiceInvoked(2000);
+```
+  
+
+## 高级自定义：2）使用自己的Https请求器  
 可能有些商户自己系统里面已经拥有自己封装得很完善的Https请求器了，想让SDK的服务统一都走自己的Https请求器来发起请求的话，这里提供了一个配置项可以实现这个功能：
 
 ```java

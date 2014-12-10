@@ -43,17 +43,19 @@ API是微信支付后台提供的最基础的最原始的形式，API定义了�
 2. 经过其他商户帮忙验证过的最佳实践（什么时候该调用查询接口？什么时候该调用撤销接口？），如果懒得自己折腾又想图个保险，请直接拿去用，确保安全可靠、系统稳定；
 3. 商户可以把精力聚焦于如何产生“授权码”、“订单号”、“订单描述信息”等跟商户自己息息相关的接口，供SDK使用，微信支付侧的逻辑完全不需要商户过多操心； 
 
-如何用好微信支付Demo，请详细修炼<a href="https://github.com/grz/wxpay_scanpay_java_demo" target="_blank">《微信支付Demo说明文档》</a> 
+如何用好微信支付Demo，请详细修炼<a href="https://github.com/grz/wxpay_scanpay_java_demo_proj" target="_blank">《微信支付Demo说明文档》</a> 
 
 ## 第三章：融会贯通，出神入化  
 
 当你学会如何使用Demo的时候，相信会觉得好方便，但是Demo终究还是只是Demo而已，跟商户自己相关的工作还是得商户开发自己实现。Demo中是用一个Bridge的模式来连接商户系统和被扫支付SDK，用一个ResultListener来处理业务逻辑可能走到的分支。
 在这里你还需要仔细研究以下几个“最佳实践”，有助你更好地了解SDK中业务逻辑层的封装，和高级使用方法：  
-1. 精通“被扫支付业务流程最佳实践”  
-2. 精通“支付业务逻辑分支处理最佳实践”  
-3. 精通“商户系统接入SDK最佳实践”  
-4. 精通“商户系统部署最佳实践”  
-5. 精通“高级自定义：使用自己的Https请求器”
+1. 精通“<a href="https://github.com/grz/wxpay_scanpay_java_demo_proj#user-content-%E8%A2%AB%E6%89%AB%E6%94%AF%E4%BB%98%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5" target="_blank">被扫支付业务流程最佳实践</a>”  
+2. 精通“<a href="https://github.com/grz/wxpay_scanpay_java_demo_proj#user-content-%E6%94%AF%E4%BB%98%E4%B8%9A%E5%8A%A1%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF%E5%A4%84%E7%90%86%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5" target="_blank">支付业务逻辑分支处理最佳实践</a>”  
+3. 精通“<a href="https://github.com/grz/wxpay_scanpay_java_demo_proj#user-content-%E5%95%86%E6%88%B7%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%85%A5sdk%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5" target="_blank">商户系统接入SDK最佳实践</a>”  
+4. 精通“<a href="https://github.com/grz/wxpay_scanpay_java_demo_proj#user-content-%E5%95%86%E6%88%B7%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5" target="_blank">商户系统部署最佳实践</a>”  
+5. 精通“<a href="https://github.com/grz/wxpay_scanpay_java_demo_proj#user-content-%E8%A2%AB%E6%89%AB%E6%94%AF%E4%BB%98%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5" target="_blank">高级自定义：使用自己的Https请求器</a>”
+
+
 
 ##### 读完Demo文档之后基本上可以很快完成接入，但还有一些相关知识需要研读，它们是：
 1. 《HTTPS服务器配置指南》
