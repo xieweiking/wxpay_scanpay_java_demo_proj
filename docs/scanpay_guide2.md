@@ -54,7 +54,7 @@ API是微信支付后台提供的最基础的最原始的形式，API定义了�
 3. 精通“<a href="https://github.com/grz/wxpay_scanpay_java_demo_proj#user-content-%E5%95%86%E6%88%B7%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%85%A5sdk%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5" target="_blank">商户系统接入SDK最佳实践</a>”  
 4. 精通“<a href="https://github.com/grz/wxpay_scanpay_java_demo_proj#user-content-%E5%95%86%E6%88%B7%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5" target="_blank">商户系统部署最佳实践</a>”    
 
-除了精通以上的最佳实践外，还需要掌握Demo里面的高级自定义功能：
+除了精通以上的最佳实践外，还需要掌握Demo里面的高级自定义功能：  
 1. <a href="https://github.com/grz/wxpay_scanpay_java_demo_proj#user-content-%E9%AB%98%E7%BA%A7%E8%87%AA%E5%AE%9A%E4%B9%891%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9F%A5%E8%AF%A2%E6%B5%81%E7%A8%8B%E5%92%8C%E6%92%A4%E9%94%80%E6%B5%81%E7%A8%8B" target="_blank">自定义查询流程和撤销流程</a>  
 2. <a href="https://github.com/grz/wxpay_scanpay_java_demo_proj#user-content-%E9%AB%98%E7%BA%A7%E8%87%AA%E5%AE%9A%E4%B9%892%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B7%B1%E7%9A%84https%E8%AF%B7%E6%B1%82%E5%99%A8" target="_blank">使用自己的Https请求器</a>
 
