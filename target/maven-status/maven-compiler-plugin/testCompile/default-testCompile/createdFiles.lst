@@ -5,9 +5,12 @@ com\tencent\business\mockservice\MockRefundService.class
 com\tencent\BeforeTest.class
 com\tencent\business\mockservice\MockRefundQueryService.class
 com\tencent\business\bridgefortest\BridgeForRefundBusinessTest.class
+com\tencent\business\mockservice\MockScanPayService.class
 com\tencent\business\mockservice\MockDownloadBillService.class
 com\tencent\business\RefundQueryBusinessTest.class
+com\tencent\business\mockservice\MockScanPayQueryService.class
 com\tencent\business\bridgefortest\BridgeForScanPayBusinessTest.class
+com\tencent\business\mockservice\MockReverseService.class
 com\tencent\business\bridgefortest\BridgeForScanPayBusinessCase2Test.class
 com\tencent\business\bridgefortest\BridgeForRefundQueryBusinessTest.class
 com\tencent\business\bridgefortest\BridgeForScanPayBusinessCase5Test.class

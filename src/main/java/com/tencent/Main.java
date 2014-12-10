@@ -1,7 +1,6 @@
 package com.tencent;
 
-import com.tencent.business.downloadbusiness.DownloadBillBusinessDemo;
-import com.tencent.business.scanpaybusiness.ScanPayBusinessDemo;
+import com.tencent.business.ScanPayBusinessDemo;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package com.tencent.business.refundquerybusiness;
+package com.tencent.listener;
 
 import com.tencent.business.RefundQueryBusiness;
 import com.tencent.protocol.refund_query_protocol.RefundQueryResData;

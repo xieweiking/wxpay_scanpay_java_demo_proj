@@ -5,7 +5,7 @@ import com.tencent.bridge.IBridge;
 import com.tencent.business.mockservice.MockReverseService;
 import com.tencent.business.mockservice.MockScanPayQueryService;
 import com.tencent.business.mockservice.MockScanPayService;
-import com.tencent.business.scanpaybusiness.DefaultScanPayBusinessResultListener;
+import com.tencent.listener.DefaultScanPayBusinessResultListener;
 import com.tencent.protocol.pay_protocol.ScanPayReqData;
 import com.tencent.business.bridgefortest.BridgeForScanPayBusinessTest;
 
@@ -191,34 +191,17 @@ public class ScanPayBusinessTest {
     @Test
     public void testCase8() throws Exception {
         //自定义调用查询接口的间隔
-        scanPayBusiness.setPayQueryLoopInvokeDuration(3000);
+        scanPayBusiness.setWaitingTimeBeforePayQueryServiceInvoked(3000);
         //自定义调用查询接口的次数
-        scanPayBusiness.setPayQueryLoopInvokeCount(1);
+        scanPayBusiness.setPayQueryLoopInvokedCount(1);
         //自定义调用撤销接口的间隔
-        scanPayBusiness.setReverseLoopInvokeDuration(2000);
-        //自定义调用撤销接口的次数
-        scanPayBusiness.setReverseLoopInvokeCounts(1);//修改为只撤销一次
+        scanPayBusiness.setWaitingTimeBeforeReverseServiceInvoked(2000);
+
         scanPayBusiness.setScanPayService(new MockScanPayService("/payserviceresponsedata/usepaying.xml"));
         scanPayBusiness.setScanPayQueryService(new MockScanPayQueryService("/payqueryserviceresponsedata/payqueryfail.xml"));
         scanPayBusiness.setReverseService(new MockReverseService("/reverseserviceresponsedata/reversesuccess.xml"));
         runBusiness(bridgeForScanPayBusinessTest, resultListener);
-        assertEquals(resultListener.getResult(), DefaultScanPayBusinessResultListener.ON_REVERSE_SUCCESS);
-    }
-
-
-    /**
-     * 测试Case9
-     * 这个通过本地模拟API返回数据来测试“Case9:【撤销失败】”分支
-     *
-     * @throws Exception
-     */
-    @Test
-    public void testCase9() throws Exception {
-        scanPayBusiness.setScanPayService(new MockScanPayService("/payserviceresponsedata/usepaying.xml"));
-        scanPayBusiness.setScanPayQueryService(new MockScanPayQueryService("/payqueryserviceresponsedata/payqueryfail.xml"));
-        scanPayBusiness.setReverseService(new MockReverseService("/reverseserviceresponsedata/reversefail.xml"));
-        runBusiness(bridgeForScanPayBusinessTest, resultListener);
-        assertEquals(resultListener.getResult(), DefaultScanPayBusinessResultListener.ON_REVERSE_FAIL);
+        assertEquals(resultListener.getResult(), DefaultScanPayBusinessResultListener.ON_FAIL);
     }
 
 
@@ -246,7 +229,7 @@ public class ScanPayBusinessTest {
     public void testCase11() throws Exception {
         scanPayBusiness.setScanPayService(new MockScanPayService("/payserviceresponsedata/payfail.xml"));
         runBusiness(bridgeForScanPayBusinessTest, resultListener);
-        assertEquals(resultListener.getResult(), DefaultScanPayBusinessResultListener.ON_FAIL_BY_OTHER_REASON);
+        assertEquals(resultListener.getResult(), DefaultScanPayBusinessResultListener.ON_FAIL);
     }
 
 

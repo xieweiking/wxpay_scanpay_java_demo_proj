@@ -3,7 +3,78 @@
 欢迎大家使用这个Demo，希望这个Demo可以大大提升大家的效率，大家遇到问题可以第一时间发邮件给到以下地址（grz@grzcn.com）或是提交你宝贵的Pull Request。  
 该Demo用到了“被扫支付SDK”，SDK的详细说明请看<a href="https://github.com/grz/wxpay_scanpay_java_sdk" title="被扫支付SDK" target="_blank">这里</a>
 
-## Demo快速上手指引
+## 快速上手，使用SDK只需三步即可接入“被扫支付”  
+##### 第一步，初始化SDK  
+
+```java
+    //--------------------------------------------------------------------
+    //第一步：初始化SDK（只需全局初始化一次即可）
+    //--------------------------------------------------------------------
+    WXPay.initSDKConfiguration(
+                //签名算法需要用到的秘钥
+                "40a8f8aa8ebe45a40bdc4e0f7307bc66",
+                //公众账号ID，成功申请公众账号后获得
+                "wxf5b5e87a6a0fde94",
+                //商户ID，成功申请微信支付功能之后通过官方发出的邮件获得
+                "10000097",
+                //子商户ID，受理模式下必填；
+                "",
+                //HTTP证书在服务器中的路径，用来加载证书用
+                "C:/wxpay_scanpay_java_cert/10000097.p12",
+                //HTTP证书的密码，默认等于MCHID
+                "10000097"
+        );
+```
+
+##### 第二步，准备好提交给API的数据(scanPayReqData)  
+
+```java
+    //--------------------------------------------------------------------
+    //第二步：准备好提交给API的数据(scanPayReqData)
+    //--------------------------------------------------------------------
+    //1）创建一个可以用来生成数据的bridge，这里用的是一个专门用来测试用的Bridge，商户需要自己实现
+        BridgeForScanPayBusinessTest bridge = new BridgeForScanPayBusinessTest();
+        //2）从bridge里面拿到数据，构建提交被扫支付API需要的数据对象
+        ScanPayReqData scanPayReqData = new ScanPayReqData(
+                //这个是扫码终端设备从用户手机上扫取到的支付授权号，有效期是1分钟
+                bridge.getAuthCode(),
+                //要支付的商品的描述信息，用户会在支付成功页面里看到这个信息
+                bridge.getBody(),
+                //支付订单里面可以填的附加数据，API会将提交的这个附加数据原样返回
+                bridge.getAttach(),
+                //商户系统内部的订单号,32个字符内可包含字母, 确保在商户系统唯一
+                bridge.getOutTradeNo(),
+                //订单总金额，单位为“分”，只能整数
+                bridge.getTotalFee(),
+                //商户自己定义的扫码支付终端设备号，方便追溯这笔交易发生在哪台终端设备上
+                bridge.getDeviceInfo(),
+                //订单生成的机器IP
+                bridge.getSpBillCreateIP(),
+                //订单生成时间，格式为yyyyMMddHHmmss，如2009年12月25日9点10分10秒表示为20091225091010
+                bridge.getTimeStart(),
+                //订单失效时间，格式同上
+                bridge.getTimeExpire(),
+                //商品标记，微信平台配置的商品标记，用于优惠券或者满减使用
+                bridge.getGoodsTag()
+        );
+```
+
+##### 第三步，准备好一个用来处理各种结果分支的监听器(resultListener)  
+
+```java
+    //--------------------------------------------------------------------
+        //第三步：准备好一个用来处理各种结果分支的监听器(resultListener)
+        //--------------------------------------------------------------------
+        //这个是Demo里面写的一个默认行为，商户需要根据自身需求来进行完善
+        DefaultScanPayBusinessResultListener resultListener = new DefaultScanPayBusinessResultListener();
+
+        //--------------------------------------------------------------------
+        //搞定以上三步后执行业务逻辑
+        //--------------------------------------------------------------------
+        WXPay.doScanPayBusiness(scanPayReqData,resultListener);
+```
+
+## Demo简单说明
 1. [Demo中包含的内容](#user-content-demo包含的内容)
 2. [Demo依赖的配置项](#user-content-demo依赖的配置项)
 3. [Demo需要商户自己实现的IBridge](#user-content-demo需要商户自己实现的ibridge)
@@ -20,17 +91,18 @@
 
 ## Demo包含的内容
 
-![img](https://raw.githubusercontent.com/grz/wxpay_scanpay_java_demo_proj/master/docs/asset/scanpay_demo_structure.png "Demo整体结构")  
 
 Demo里面需要大家关注的主要有两个地方：  
 
-1. 四个业务Demo，里面把代码流程已经帮大家写好，只需要将里面代码会走到的所有Case加上对应逻辑，例如（客服端弹出提示）
+1. 四个业务Demo，位于src/main/java/com/tencent/business/目录里面，这些demo将会教大家如何调用SDK里面封装好的业务逻辑。
 
-2. 桥接器IBridge，这个东西是用来对接商户系统逻辑，产生SDK请求所需要的特定参数用的，请大家按照API文档的说明实现这些参数的产生逻辑。
+2. 桥接器bridge，位于src/main/java/com/tencent/bridge/目录里面。里面目前有4个bridge，分别对应4个业务demo。这个东西是用来对接商户系统逻辑，产生SDK请求所需要的特定参数用的，请大家按照API文档的说明实现这些参数的产生逻辑。 
+ 
+3. 监听器listener，位于src/main/java/com/tencent/listener/目录里面，这几个listener都是对业务逻辑各种可能返回事件的默认处理，商户需要自己实现更加具体的处理逻辑。
 
 ## Demo依赖的配置项  
-打开demo工程里的wxpay.properties文件可以看到里面有5个配置项（该demo里面用的是一个mchid为10000097的测试号）  
-这5项关键配置项的作用分别为：
+打开demo工程里的wxpay.properties文件可以看到里面有6个配置项（该demo里面用的是一个mchid为10000097的测试号）  
+这些关键配置项的作用分别为：
 
 <table>
     <tbody>
@@ -61,7 +133,7 @@ Demo里面需要大家关注的主要有两个地方：
         <tr>
             <td>CERT_LOCAL_PATH</td>
             <td>HTTP证书在服务器中的路径，用来加载证书用</td>
-            <td>成功申请微信支付功能之后通过官方发出的邮件获得“HTTPS证书”，这个配置项就是“HTTP证书”在服务器上所部署的路径（demo中需要的证书文件就是asset文件夹中的10000097.cert）</td>
+            <td>成功申请微信支付功能之后通过官方发出的邮件获得“HTTPS证书”，这个配置项就是“HTTP证书”在服务器上所部署的路径（demo中需要的证书文件就是docs/https_cert_for_test/文件夹中的10000097.cert）</td>
         </tr>
         <tr>
             <td>CERT_PASSWORD</td>
@@ -71,6 +143,7 @@ Demo里面需要大家关注的主要有两个地方：
     </tbody>
 </table>
 
+这些配置项用来对SDK进行一次初始化的时候使用。初始化方法见上面的“[第一步，初始化SDK](#user-content-demo第一步，初始化SDK)”
 
 ## Demo需要商户自己实现的IBridge
 ![img](https://raw.githubusercontent.com/grz/wxpay_scanpay_java_demo_proj/master/docs/asset/ibridge.jpg "ibridge桥接器")  
@@ -89,14 +162,25 @@ public String getAuthCode(){
 以上只是简单的hardcode（用来先简单手动输入“授权码”调试API是否能正常返回数据时用），实际上商户自己在实现这个接口的时候就需要根据自己实际系统来进行设计了，例如需要去监听“扫码枪”等具备一维码/二维码扫描功能的外设，当成功扫描到这串“授权码”的时候，将其保存下来，然后触发提交支付的API调用，调用时让IBridge桥接器中的getAuthCode()接口取得刚刚扫描到的授权码，作为参数传给支付API。  
 
 ## 被扫支付业务流程最佳实践  
-被扫支付整个完成流程将会涉及到“查询”和“撤销”等请求，这里给出建议实现的流程供大家参考，本Demo里面就是按照这个流程来设计的：  
-![img](https://raw.githubusercontent.com/grz/wxpay_scanpay_java_demo_proj/master/docs/asset/scanpay_flow.png "被扫支付流程")  
-当用户遇到支付异常，请按如下说明处理：  
-1. 用户微信端弹出系统错误提示框，用户可在交易列表查看交易情况，如果未找到订单，需要商户重新发起支付交易；如果订单显示成功支付，商户收银系统再次调用【查询订单API】查询实际支付结果；
-2. 用户微信端弹出支付失败提示，例如：余额不足，信用卡失效。需要重新发起支付；
-3. 当交易超时或支付交易失败，商户收银系统必须调用【撤销支付API】（详见公共API），撤销此交易；
-4. 由于银行系统异常、用户余额不足、不支持用户卡种等原因使当前支付交易失败，商户收银系统应该把错误提示明确展示给收银员；
-5. 跟据返回的错误码，判断是否需要撤销交易，具体详见API返回错误码列表；
+被扫支付整个完成流程将会涉及到“查询”和“撤销”等请求，这里给出建议实现的流程供大家参考，SDK里面的ScanPayBusiness就是按照这个流程来设计的：  
+![img](https://raw.githubusercontent.com/grz/wxpay_scanpay_java_demo_proj/master/docs/asset/best_practice.png "被扫支付最佳实践")  
+
+从上图可见主要流程分为四种情况：  
+1. 直接扣款成功：直接返回成功
+2. 扣款明确失败：走撤销流程，返回失败（建议提示具体的失败信息，指示用户进行下一步操作）
+3. 需输入密码：走查单流程，如果查询了一定时间还是没有成功则当失败处理，直接走撤销
+4. 扣款未知失败：先走查单流程，如果查询了一定时间还是没有成功则当失败处理，直接走撤销
+
+商户可以根据自己的实际需要来配置其中的“查询流程”、“撤销流程”的“查询次数”和“查询间隔”，例如：
+
+```java
+    //自定义调用查询接口的间隔
+    scanPayBusiness.setWaitingTimeBeforePayQueryServiceInvoked(3000);
+    //自定义调用查询接口的次数
+    scanPayBusiness.setPayQueryLoopInvokedCount(1);
+    //自定义调用撤销接口的间隔
+    scanPayBusiness.setWaitingTimeBeforeReverseServiceInvoked(2000);
+```
 
 
 ## 商户系统接入SDK最佳实践

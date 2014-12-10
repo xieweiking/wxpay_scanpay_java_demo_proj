@@ -1,9 +1,8 @@
 package com.tencent.business;
 
 import com.tencent.BeforeTest;
-import com.tencent.WXPay;
 import com.tencent.bridge.IBridge;
-import com.tencent.business.downloadbusiness.DefaultDownloadBillBusinessResultListener;
+import com.tencent.listener.DefaultDownloadBillBusinessResultListener;
 import com.tencent.business.mockservice.MockDownloadBillService;
 import com.tencent.protocol.downloadbill_protocol.DownloadBillReqData;
 import com.tencent.service.DownloadBillService;
@@ -101,6 +100,7 @@ public class DownloadBillBusinessTest {
      */
     @Test
     public void testCase3() throws Exception {
+        downloadBillBusiness.setDownloadBillService(new MockDownloadBillService("/downloadbillserviceresponsedata/bill.txt"));
         runDemo(bridgeForBillBusinessTest,listener);
         assertEquals(listener.getResult(),listener.ON_DOWNLOAD_BILL_SUCCESS);
     }

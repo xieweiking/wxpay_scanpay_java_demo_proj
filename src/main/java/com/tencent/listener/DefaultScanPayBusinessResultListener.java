@@ -1,4 +1,4 @@
-package com.tencent.business.scanpaybusiness;
+package com.tencent.listener;
 
 import com.tencent.business.ScanPayBusiness;
 import com.tencent.protocol.pay_protocol.ScanPayResData;
@@ -18,10 +18,8 @@ public class DefaultScanPayBusinessResultListener implements ScanPayBusiness.Res
     public static final String ON_FAIL_BY_AUTH_CODE_EXPIRE = "on_fail_by_auth_code_expire";
     public static final String ON_FAIL_BY_AUTH_CODE_INVALID = "on_fail_by_auth_code_invalid";
     public static final String ON_FAIL_BY_MONEY_NOT_ENOUGH = "on_fail_by_money_not_enough";
-    public static final String ON_FAIL_BY_OTHER_REASON = "on_fail_by_other_reason";
+    public static final String ON_FAIL = "on_fail";
     public static final String ON_SUCCESS = "on_success";
-    public static final String ON_REVERSE_FAIL = "on_reverse_fail";
-    public static final String ON_REVERSE_SUCCESS = "on_reverse_success";
 
     private String result = "";
 
@@ -69,8 +67,8 @@ public class DefaultScanPayBusinessResultListener implements ScanPayBusiness.Res
     /**
      * 支付失败，其他原因导致，这种情况建议把log记录好
      */
-    public void onFailByOtherReason(ScanPayResData scanPayResData) {
-        result = ON_FAIL_BY_OTHER_REASON;
+    public void onFail(ScanPayResData scanPayResData) {
+        result = ON_FAIL;
     }
 
     @Override
@@ -87,22 +85,6 @@ public class DefaultScanPayBusinessResultListener implements ScanPayBusiness.Res
      */
     public void onSuccess(ScanPayResData scanPayResData) {
         result = ON_SUCCESS;
-    }
-
-    @Override
-    /**
-     * 撤销成功，商户自己记录好log
-     */
-    public void onReverseSuccess(ScanPayResData scanPayResData) {
-        result = ON_REVERSE_SUCCESS;
-    }
-
-    @Override
-    /**
-     * 撤销失败，商户记录好log，反馈给微信客服
-     */
-    public void onReverseFail(ScanPayResData scanPayResData) {
-        result = ON_REVERSE_FAIL;
     }
 
     public String getResult() {

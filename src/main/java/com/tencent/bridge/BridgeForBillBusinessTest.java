@@ -85,7 +85,7 @@ public class BridgeForBillBusinessTest implements IBridge{
 
     @Override
     public String getBillDate() {
-        return "20141107";
+        return "20141108";
     }
 
     @Override

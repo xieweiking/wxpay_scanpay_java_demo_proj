@@ -1,6 +1,7 @@
-package com.tencent.business.refundquerybusiness;
+package com.tencent.business;
 
 import com.tencent.WXPay;
+import com.tencent.listener.DefaultRefundQueryBusinessResultListener;
 import com.tencent.protocol.refund_query_protocol.RefundQueryReqData;
 import com.tencent.bridge.BridgeForRefundQueryBusinessTest;
 

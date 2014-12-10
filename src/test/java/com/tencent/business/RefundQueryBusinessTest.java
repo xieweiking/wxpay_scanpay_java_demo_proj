@@ -1,10 +1,9 @@
 package com.tencent.business;
 
 import com.tencent.BeforeTest;
-import com.tencent.WXPay;
 import com.tencent.bridge.IBridge;
 import com.tencent.business.mockservice.MockRefundQueryService;
-import com.tencent.business.refundquerybusiness.DefaultRefundQueryBusinessResultListener;
+import com.tencent.listener.DefaultRefundQueryBusinessResultListener;
 import com.tencent.protocol.refund_query_protocol.RefundQueryReqData;
 import com.tencent.service.RefundQueryService;
 import org.junit.*;

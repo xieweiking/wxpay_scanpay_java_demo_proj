@@ -1,6 +1,7 @@
-package com.tencent.business.downloadbusiness;
+package com.tencent.business;
 
 import com.tencent.WXPay;
+import com.tencent.listener.DefaultDownloadBillBusinessResultListener;
 import com.tencent.protocol.downloadbill_protocol.DownloadBillReqData;
 import com.tencent.bridge.BridgeForBillBusinessTest;
 
