@@ -6,16 +6,26 @@ import com.tencent.business.mockservice.MockReverseService;
 import com.tencent.business.mockservice.MockScanPayQueryService;
 import com.tencent.business.mockservice.MockScanPayService;
 import com.tencent.common.Configure;
+import com.tencent.common.Signature;
+import com.tencent.common.Util;
+import com.tencent.common.XMLParser;
 import com.tencent.listener.DefaultScanPayBusinessResultListener;
 import com.tencent.protocol.pay_protocol.ScanPayReqData;
 import com.tencent.business.bridgefortest.BridgeForScanPayBusinessTest;
 
 import static org.junit.Assert.*;
 
+import com.tencent.protocol.pay_query_protocol.CouponData;
+import com.tencent.protocol.pay_query_protocol.ScanPayQueryReqData;
 import com.tencent.service.ScanPayService;
 import org.junit.*;
 import com.tencent.business.bridgefortest.BridgeForScanPayBusinessCase2Test;
 import com.tencent.business.bridgefortest.BridgeForScanPayBusinessCase5Test;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
+import java.util.List;
 
 /**
  * ScanPayBusinessDemo Tester.
@@ -235,6 +245,40 @@ public class ScanPayBusinessTest {
         assertEquals(resultListener.getResult(), DefaultScanPayBusinessResultListener.ON_FAIL);
     }
 
+    /**
+     * 测试从查询接口获取优惠券数据
+     *
+     * @throws Exception
+     */
+    @Test
+    public void testGetCouponDataFromPayQueryString() throws Exception {
+        MockScanPayQueryService mockScanPayQueryService = new MockScanPayQueryService("/payqueryserviceresponsedata/payquerysuccesswithcoupondata.xml");
+
+        String payQueryResponseString = mockScanPayQueryService.request(new ScanPayQueryReqData("",""));
+
+        List<CouponData> list = XMLParser.getCouponDataList(payQueryResponseString);
+
+        int count = 1;
+        String result="";
+
+        for(CouponData couponData : list){
+            Util.log("退款订单数据NO" + count + ":");
+            Util.log(couponData.toMap());
+            result += couponData.toMap().toString();
+            count++;
+        }
+
+        assertEquals(result, "{ coupon_batch_id=0 coupon_id=test0 coupon_fee=test0}{ coupon_batch_id=1 coupon_id=test1 coupon_fee=test1}{ coupon_batch_id=2 coupon_id=test2 coupon_fee=test2}{ coupon_batch_id=3 coupon_id=test3 coupon_fee=test3}");
+
+
+
+
+    }
+
+    @Test
+    public void testGetSignature() throws IOException, ParserConfigurationException, SAXException {
+        System.out.println(Signature.getSignFromResponseString(Util.getLocalXMLString("/payqueryserviceresponsedata/payquerysuccesswithcoupondata.xml")));
+    }
 
     /**
      * Method: doOnePayQuery(String transactionID, String outTradeNo)

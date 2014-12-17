@@ -1,6 +1,8 @@
 package com.tencent;
 
 import com.tencent.business.ScanPayBusinessDemo;
+import com.tencent.common.Signature;
+import com.tencent.common.Util;
 
 public class Main {
 
@@ -33,7 +35,7 @@ public class Main {
             //或是直接运行ScanPaySDKTestSuite 即可
 
             //小提示：本地通过xml进行API数据模拟的时候，先按需手动修改xml各个节点的值，然后通过以下方法对这个新的xml数据进行签名得到一串合法的签名，最后把这串签名放到这个xml里面的sign字段里，这样进行模拟的时候就可以通过签名验证了
-            //System.out.println(Signature.getSignFromResponseString(Util.getLocalXMLString("/com/tencent/business/payserviceresponsedata/paysuccess.xml")));
+            //System.out.println(Signature.getSignFromResponseString(Util.getLocalXMLString("/payserviceresponsedata/paysuccesswithcoupondata.xml")));
 
         } catch (Exception e){
             System.out.println(e.getMessage());
