@@ -17,8 +17,8 @@
 API是微信支付后台提供的最基础的最原始的形式，API定义了一个具体的原子功能，例如“支付”API、“查询API”、“撤销API”、“退款API”、“退款查询API”、“下载对账单API”等，每一个API都是一个具体的功能。  
 同时API也会定义调用这个API时需要传过去的每一个参数的含义和具体格式，同时还会定义每一个返回参数的含义。
 
-而这一切都在《微信支付API文档》里面做了非常详细的说明。
-但是该文档里面内容非常多，在这里建议先详细修炼里面第五章“5.  被扫支付模式开发指引”。其他章节简单过一下，后面遇到问题再查一查即可。
+而这一切都在<a href="http://mch.weixin.qq.com/wiki/doc/api/" target="_blank">《微信支付API文档》</a>里面做了非常详细的说明。
+但是该文档里面内容非常多，在这里建议先重点阅读里面的<a href="http://mch.weixin.qq.com/wiki/doc/api/index.php?chapter=5_1" target="_blank">“被扫支付”</a>。其他章节简单过一下，后面遇到问题再查一查即可。
 
 
 #### 中级篇：《SDK文档》修炼  
@@ -59,11 +59,11 @@ API是微信支付后台提供的最基础的最原始的形式，API定义了�
 2. <a href="https://github.com/grz/wxpay_scanpay_java_demo_proj#user-content-%E9%AB%98%E7%BA%A7%E8%87%AA%E5%AE%9A%E4%B9%892%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B7%B1%E7%9A%84https%E8%AF%B7%E6%B1%82%E5%99%A8" target="_blank">使用自己的Https请求器</a>
 
 ##### 读完Demo文档之后基本上可以很快完成接入，但还有一些相关知识需要研读，它们是：
-1. 《HTTPS服务器配置指南》
+1. <a href="http://mch.weixin.qq.com/wiki/doc/api/index.php?chapter=0_1" target="_blank">《HTTPS服务器配置指南》</a>
 2. 《商户系统部署建议》
 3. 《商户系统开发设计建议》
 4. 《商户接入自测验收手册》
-5. 《企业红包使用说明》（有需要用到企业红包的时候再读）
+5. <a href="http://mch.weixin.qq.com/wiki/doc/api/index.php?chapter=10_1" target="_blank">《代金券或立减优惠》</a>
 
 读完以上知识基本就差不多了。
 
