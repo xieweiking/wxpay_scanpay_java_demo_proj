@@ -1,4 +1,4 @@
-# 微信支付之“被扫支付”JavaDemo
+# 微信支付之“被扫支付JavaDemo”
 
 欢迎大家使用这个Demo，希望这个Demo可以大大提升大家的效率，大家遇到问题可以第一时间发邮件给到以下地址（grz@grzcn.com）或是提交你宝贵的Pull Request。  
 该Demo用到了“被扫支付SDK”，SDK的详细说明请看<a href="https://github.com/grz/wxpay_scanpay_java_sdk_proj" title="被扫支付SDK" target="_blank">这里</a>
