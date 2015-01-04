@@ -8,7 +8,7 @@
     <mch_id><![CDATA[10000097]]></mch_id>
     <sub_mch_id><![CDATA[]]></sub_mch_id>
     <nonce_str><![CDATA[nuBgezvlp0anulFT]]></nonce_str>
-    <sign><![CDATA[C50B931D11365FB420AA503CF9456D28]]></sign>
+    <sign><![CDATA[EC0178AE067C29AB028CD25454C91B9C]]></sign>
     <result_code><![CDATA[SUCCESS]]></result_code>
     <attach><![CDATA[微信支付JavaSDK测试：ScanPayBusinessDemo，为了跑通支付全流程]]></attach>
     <trade_state><![CDATA[SUCCESS]]></trade_state>

@@ -17,6 +17,9 @@ import static org.junit.Assert.*;
 
 import com.tencent.protocol.pay_query_protocol.CouponData;
 import com.tencent.protocol.pay_query_protocol.ScanPayQueryReqData;
+import com.tencent.protocol.reverse_protocol.ReverseReqData;
+import com.tencent.service.ReverseService;
+import com.tencent.service.ScanPayQueryService;
 import com.tencent.service.ScanPayService;
 import org.junit.*;
 import com.tencent.business.bridgefortest.BridgeForScanPayBusinessCase2Test;
@@ -277,79 +280,25 @@ public class ScanPayBusinessTest {
 
     @Test
     public void testGetSignature() throws IOException, ParserConfigurationException, SAXException {
-        System.out.println(Signature.getSignFromResponseString(Util.getLocalXMLString("/payqueryserviceresponsedata/payquerysuccesswithcoupondata.xml")));
+        System.out.println(Signature.getSignFromResponseString(Util.getLocalXMLString("/refundserviceresponsedata/hackdata.xml")));
     }
 
+
+    @Test
     /**
-     * Method: doOnePayQuery(String transactionID, String outTradeNo)
+     * 测试撤销服务
      */
-    @Ignore
-    public void testDoOnePayQuery() throws Exception {
-//TODO: Test goes here... 
-/* 
-try { 
-   Method method = scanPayBusiness.getClass().getMethod("doOnePayQuery", String.class, String.class);
-   method.setAccessible(true); 
-   method.invoke(<Object>, <Parameters>); 
-} catch(NoSuchMethodException e) { 
-} catch(IllegalAccessException e) { 
-} catch(InvocationTargetException e) { 
-} 
-*/
+    public void testReverse() throws Exception {
+        ReverseReqData reverseReqData = new ReverseReqData("","1000000001");
+        ReverseService reverseService = new ReverseService();
+        System.out.println(reverseService.request(reverseReqData));
     }
 
-    /**
-     * Method: doPayQueryLoop(int loopCount, String transactionID, String outTradeNo)
-     */
-    @Ignore
-    public void testDoPayQueryLoop() throws Exception {
-//TODO: Test goes here... 
-/* 
-try { 
-   Method method = scanPayBusiness.getClass().getMethod("doPayQueryLoop", int.class, String.class, String.class);
-   method.setAccessible(true); 
-   method.invoke(<Object>, <Parameters>); 
-} catch(NoSuchMethodException e) { 
-} catch(IllegalAccessException e) { 
-} catch(InvocationTargetException e) { 
-} 
-*/
-    }
-
-    /**
-     * Method: doOneReverse(String transactionID, String outTradeNo)
-     */
-    @Ignore
-    public void testDoOneReverse() throws Exception {
-//TODO: Test goes here... 
-/* 
-try { 
-   Method method = scanPayBusiness.getClass().getMethod("doOneReverse", String.class, String.class);
-   method.setAccessible(true); 
-   method.invoke(<Object>, <Parameters>); 
-} catch(NoSuchMethodException e) { 
-} catch(IllegalAccessException e) { 
-} catch(InvocationTargetException e) { 
-} 
-*/
-    }
-
-    /**
-     * Method: doReverseLoop(int loopCount, String transactionID, String outTradeNo)
-     */
-    @Ignore
-    public void testDoReverseLoop() throws Exception {
-//TODO: Test goes here... 
-/* 
-try { 
-   Method method = scanPayBusiness.getClass().getMethod("doReverseLoop", int.class, String.class, String.class);
-   method.setAccessible(true); 
-   method.invoke(<Object>, <Parameters>); 
-} catch(NoSuchMethodException e) { 
-} catch(IllegalAccessException e) { 
-} catch(InvocationTargetException e) { 
-} 
-*/
+    @Test
+    public void testScanPayQuery() throws Exception {
+        ScanPayQueryReqData scanPayQueryReqData = new ScanPayQueryReqData("","1000000001");
+        ScanPayQueryService scanPayQueryService = new ScanPayQueryService();
+        System.out.println(scanPayQueryService.request(scanPayQueryReqData));
     }
 
 } 
