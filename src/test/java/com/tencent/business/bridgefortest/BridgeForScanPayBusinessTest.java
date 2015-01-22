@@ -20,7 +20,7 @@ public class BridgeForScanPayBusinessTest implements IBridge {
      */
     public String getAuthCode(){
         //由于这个authCode有效期只有1分钟，所以实际测试SDK的时候也可以手动将微信刷卡界面一维码下的那串数字输入进来
-        return "120242957324236112";
+        return "130070451334348700";
     }
 
     /**
@@ -29,7 +29,7 @@ public class BridgeForScanPayBusinessTest implements IBridge {
      */
     public String getOutTradeNo(){
         //建议测试的时候自己手动写一个，多次测试可以慢慢累加
-        return "1000000001";
+        return getTimeStart();
     }
 
     /**

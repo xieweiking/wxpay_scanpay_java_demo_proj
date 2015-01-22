@@ -22,6 +22,7 @@ public class DefaultScanPayBusinessResultListener implements ScanPayBusiness.Res
     public static final String ON_SUCCESS = "on_success";
 
     private String result = "";
+    private String transcationID = "";
 
     @Override
     /**
@@ -83,8 +84,9 @@ public class DefaultScanPayBusinessResultListener implements ScanPayBusiness.Res
     /**
      * 恭喜，支付成功，请返回成功结果
      */
-    public void onSuccess(ScanPayResData scanPayResData) {
+    public void onSuccess(ScanPayResData scanPayResData, String transID) {
         result = ON_SUCCESS;
+        transcationID = transID;
     }
 
     public String getResult() {
@@ -93,5 +95,13 @@ public class DefaultScanPayBusinessResultListener implements ScanPayBusiness.Res
 
     public void setResult(String result) {
         this.result = result;
+    }
+
+    public String getTranscationID() {
+        return transcationID;
+    }
+
+    public void setTranscationID(String transcationID) {
+        this.transcationID = transcationID;
     }
 }

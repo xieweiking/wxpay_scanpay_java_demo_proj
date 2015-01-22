@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="wxpay_scanpay_java_demo_war">
+    <output-path>$PROJECT_DIR$/out/artifacts/wxpay_scanpay_java_demo_war</output-path>
+    <root id="root" />
+  </artifact>
+</component>

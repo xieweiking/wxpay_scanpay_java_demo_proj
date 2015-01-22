@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="35.437" errors="0" skipped="0" tests="14" name="com.tencent.business.ScanPayBusinessTest">
+<testsuite failures="0" time="35.202" errors="0" skipped="0" tests="14" name="com.tencent.business.ScanPayBusinessTest">
   <properties>
     <property name="idea.version" value="14.0.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -20,7 +20,7 @@
     <property name="basedir" value="C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj"/>
     <property name="java.endorsed.dirs" value="C:\Program Files (x86)\Java\jdk1.6.0_20\jre\lib\endorsed"/>
     <property name="os.arch" value="x86"/>
-    <property name="surefire.real.class.path" value="C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\target\surefire\surefirebooter8501860776440188254.jar"/>
+    <property name="surefire.real.class.path" value="C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\target\surefire\surefirebooter6627534115529408816.jar"/>
     <property name="java.io.tmpdir" value="C:\Users\rizenguo\AppData\Local\Temp\"/>
     <property name="line.separator" value="
 "/>
@@ -61,18 +61,18 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
   </properties>
-  <testcase time="0.043" classname="com.tencent.business.ScanPayBusinessTest" name="testCase1"/>
-  <testcase time="0.199" classname="com.tencent.business.ScanPayBusinessTest" name="testCase2"/>
-  <testcase time="0.029" classname="com.tencent.business.ScanPayBusinessTest" name="testCase3"/>
-  <testcase time="6.797" classname="com.tencent.business.ScanPayBusinessTest" name="testCase4"/>
-  <testcase time="6.28" classname="com.tencent.business.ScanPayBusinessTest" name="testCase5"/>
-  <testcase time="5.648" classname="com.tencent.business.ScanPayBusinessTest" name="testCase6"/>
-  <testcase time="5.032" classname="com.tencent.business.ScanPayBusinessTest" name="testCase7"/>
-  <testcase time="5.042" classname="com.tencent.business.ScanPayBusinessTest" name="testCase8"/>
-  <testcase time="0.021" classname="com.tencent.business.ScanPayBusinessTest" name="testCase10"/>
-  <testcase time="5.022" classname="com.tencent.business.ScanPayBusinessTest" name="testCase11"/>
-  <testcase time="0.02" classname="com.tencent.business.ScanPayBusinessTest" name="testGetCouponDataFromPayQueryString"/>
+  <testcase time="0.033" classname="com.tencent.business.ScanPayBusinessTest" name="testCase1"/>
+  <testcase time="0.174" classname="com.tencent.business.ScanPayBusinessTest" name="testCase2"/>
+  <testcase time="0.027" classname="com.tencent.business.ScanPayBusinessTest" name="testCase3"/>
+  <testcase time="6.276" classname="com.tencent.business.ScanPayBusinessTest" name="testCase4"/>
+  <testcase time="6.384" classname="com.tencent.business.ScanPayBusinessTest" name="testCase5"/>
+  <testcase time="5.751" classname="com.tencent.business.ScanPayBusinessTest" name="testCase6"/>
+  <testcase time="5.035" classname="com.tencent.business.ScanPayBusinessTest" name="testCase7"/>
+  <testcase time="5.057" classname="com.tencent.business.ScanPayBusinessTest" name="testCase8"/>
+  <testcase time="0.024" classname="com.tencent.business.ScanPayBusinessTest" name="testCase10"/>
+  <testcase time="5.027" classname="com.tencent.business.ScanPayBusinessTest" name="testCase11"/>
+  <testcase time="0.022" classname="com.tencent.business.ScanPayBusinessTest" name="testGetCouponDataFromPayQueryString"/>
   <testcase time="0.01" classname="com.tencent.business.ScanPayBusinessTest" name="testGetSignature"/>
-  <testcase time="0.618" classname="com.tencent.business.ScanPayBusinessTest" name="testReverse"/>
-  <testcase time="0.624" classname="com.tencent.business.ScanPayBusinessTest" name="testScanPayQuery"/>
+  <testcase time="0.68" classname="com.tencent.business.ScanPayBusinessTest" name="testReverse"/>
+  <testcase time="0.663" classname="com.tencent.business.ScanPayBusinessTest" name="testScanPayQuery"/>
 </testsuite>
