@@ -2,6 +2,8 @@ package com.tencent.business.scanpaybusiness;
 
 import com.tencent.business.ScanPayBusiness;
 import com.tencent.protocol.pay_protocol.ScanPayResData;
+import com.tencent.protocol.pay_query_protocol.ScanPayQueryResData;
+import com.tencent.protocol.reverse_protocol.ReverseResData;
 
 
 /**
@@ -15,6 +17,8 @@ public class DefaultScanPayBusinessResultListener implements ScanPayBusiness.Res
     public static final String ON_FAIL_BY_RETURN_CODE_ERROR = "on_fail_by_return_code_error";
     public static final String ON_FAIL_BY_RETURN_CODE_FAIL = "on_fail_by_return_code_fail";
     public static final String ON_FAIL_BY_SIGN_INVALID = "on_fail_by_sign_invalid";
+    public static final String ON_FAIL_BY_QUERY_SIGN_INVALID = "on_fail_by_query_sign_invalid";
+    public static final String ON_FAIL_BY_REVERSE_SIGN_INVALID = "on_fail_by_query_service_sign_invalid";
     public static final String ON_FAIL_BY_AUTH_CODE_EXPIRE = "on_fail_by_auth_code_expire";
     public static final String ON_FAIL_BY_AUTH_CODE_INVALID = "on_fail_by_auth_code_invalid";
     public static final String ON_FAIL_BY_MONEY_NOT_ENOUGH = "on_fail_by_money_not_enough";
@@ -48,6 +52,16 @@ public class DefaultScanPayBusinessResultListener implements ScanPayBusiness.Res
     }
 
     @Override
+    public void onFailByQuerySignInvalid(ScanPayQueryResData scanPayQueryResData) {
+        result = ON_FAIL_BY_QUERY_SIGN_INVALID;
+    }
+
+    @Override
+    public void onFailByReverseSignInvalid(ReverseResData reverseResData) {
+        result = ON_FAIL_BY_REVERSE_SIGN_INVALID;
+    }
+
+    @Override
     /**
      * 用户用来支付的二维码已经过期，提示收银员重新扫一下用户微信“刷卡”里面的二维码"
      */
@@ -72,19 +86,17 @@ public class DefaultScanPayBusinessResultListener implements ScanPayBusiness.Res
     }
 
     @Override
+    public void onSuccess(ScanPayResData scanPayResData, String s) {
+
+        result = ON_SUCCESS;
+    }
+
+    @Override
     /**
      * 用户余额不足，换其他卡支付或是用现金支付
      */
     public void onFailByMoneyNotEnough(ScanPayResData scanPayResData) {
         result = ON_FAIL_BY_MONEY_NOT_ENOUGH;
-    }
-
-    @Override
-    /**
-     * 恭喜，支付成功，请返回成功结果
-     */
-    public void onSuccess(ScanPayResData scanPayResData) {
-        result = ON_SUCCESS;
     }
 
     public String getResult() {

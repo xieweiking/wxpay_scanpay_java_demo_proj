@@ -1,6 +1,7 @@
 package com.tencent.business.scanpaybusiness;
 
 import com.tencent.WXPay;
+import com.tencent.listener.DefaultScanPayBusinessResultListener;
 import com.tencent.protocol.pay_protocol.ScanPayReqData;
 import com.tencent.bridge.BridgeForScanPayBusinessTest;
 

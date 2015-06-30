@@ -1,7 +1,0 @@
-#surefire
-#Sun Dec 07 15:45:42 CST 2014
-user.dir=C\:\\MySVN\\MyJava\\wxpay_scanpay_java_demo_proj
-idea.version=14.0.1
-net.sourceforge.cobertura.datafile=target/cobertura/cobertura.ser
-localRepository=C\:\\Users\\rizenguo\\.m2\\repository
-basedir=C\:\\MySVN\\MyJava\\wxpay_scanpay_java_demo_proj

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="35.202" errors="0" skipped="0" tests="14" name="com.tencent.business.ScanPayBusinessTest">
+<testsuite failures="1" time="52.694" errors="0" skipped="0" tests="14" name="com.tencent.business.ScanPayBusinessTest">
   <properties>
     <property name="idea.version" value="14.0.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -20,7 +20,7 @@
     <property name="basedir" value="C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj"/>
     <property name="java.endorsed.dirs" value="C:\Program Files (x86)\Java\jdk1.6.0_20\jre\lib\endorsed"/>
     <property name="os.arch" value="x86"/>
-    <property name="surefire.real.class.path" value="C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\target\surefire\surefirebooter6627534115529408816.jar"/>
+    <property name="surefire.real.class.path" value="C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\target\surefire\surefirebooter1678229334543268194.jar"/>
     <property name="java.io.tmpdir" value="C:\Users\rizenguo\AppData\Local\Temp\"/>
     <property name="line.separator" value="
 "/>
@@ -29,8 +29,8 @@
     <property name="os.name" value="Windows 7"/>
     <property name="net.sourceforge.cobertura.datafile" value="target/cobertura/cobertura.ser"/>
     <property name="sun.jnu.encoding" value="GBK"/>
-    <property name="java.library.path" value="C:\Program Files (x86)\Java\jdk1.6.0_20\jre\bin;.;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby1.9.3\bin;C:\Python33\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\OpenCL SDK\3.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\3.0\bin\x64;C:\Program Files\TortoiseSVN\bin;C:\Program Files\nodejs\;C:\Program Files\apache-ant-1.9.4\bin;C:\Program Files (x86)\Calibre2\;C:\Program Files\VanDyke Software\Clients\;C:\cygwin64\bin;C:\Users\rizenguo\AppData\Roaming\npm;E:\android\adt-bundle-windows-x86_64-20130219\sdk\platform-tools;E:\android\adt-bundle-windows-x86_64-20130219\sdk\tools;C:\Program Files\Java\jdk1.7.0_51\bin;"/>
-    <property name="surefire.test.class.path" value="C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\target\test-classes;C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\target\classes;C:\Users\rizenguo\.m2\repository\org\slf4j\slf4j-api\1.7.7\slf4j-api-1.7.7.jar;C:\Users\rizenguo\.m2\repository\org\slf4j\slf4j-simple\1.7.7\slf4j-simple-1.7.7.jar;C:\Users\rizenguo\.m2\repository\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar;C:\Users\rizenguo\.m2\repository\junit\junit\4.8.2\junit-4.8.2.jar;C:\Users\rizenguo\.m2\repository\commons-codec\commons-codec\1.6\commons-codec-1.6.jar;C:\Users\rizenguo\.m2\repository\org\apache\httpcomponents\fluent-hc\4.3.5\fluent-hc-4.3.5.jar;C:\Users\rizenguo\.m2\repository\org\apache\httpcomponents\httpclient\4.3.5\httpclient-4.3.5.jar;C:\Users\rizenguo\.m2\repository\org\apache\httpcomponents\httpclient-cache\4.3.5\httpclient-cache-4.3.5.jar;C:\Users\rizenguo\.m2\repository\org\apache\httpcomponents\httpcore\4.3.2\httpcore-4.3.2.jar;C:\Users\rizenguo\.m2\repository\org\apache\httpcomponents\httpmime\4.3.5\httpmime-4.3.5.jar;C:\Users\rizenguo\.m2\repository\xmlpull\xmlpull\1.1.3.1\xmlpull-1.1.3.1.jar;C:\Users\rizenguo\.m2\repository\xpp3\xpp3\1.1.4c\xpp3-1.1.4c.jar;C:\Users\rizenguo\.m2\repository\com\thoughtworks\xstream\xstream\1.4.7\xstream-1.4.7.jar;C:\Users\rizenguo\.m2\repository\xpp3\xpp3_min\1.1.4c\xpp3_min-1.1.4c.jar;C:\Users\rizenguo\.m2\repository\com\tencent\wxpay-scanpay-java-sdk\1.0.0\wxpay-scanpay-java-sdk-1.0.0.jar;"/>
+    <property name="java.library.path" value="C:\Program Files (x86)\Java\jdk1.6.0_20\jre\bin;.;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby1.9.3\bin;C:\Python33\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\OpenCL SDK\3.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\3.0\bin\x64;C:\Program Files\TortoiseSVN\bin;C:\Program Files\nodejs\;C:\Program Files\apache-ant-1.9.4\bin;C:\Program Files\VanDyke Software\Clients\;C:\cygwin64\bin;C:\Users\rizenguo\AppData\Roaming\npm;E:\android\adt-bundle-windows-x86_64-20130219\sdk\platform-tools;E:\android\adt-bundle-windows-x86_64-20130219\sdk\tools;C:\Program Files\Java\jdk1.7.0_51\bin;"/>
+    <property name="surefire.test.class.path" value="C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\target\test-classes;C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\target\classes;C:\Users\rizenguo\.m2\repository\org\slf4j\slf4j-api\1.7.7\slf4j-api-1.7.7.jar;C:\Users\rizenguo\.m2\repository\org\slf4j\slf4j-simple\1.7.7\slf4j-simple-1.7.7.jar;C:\Users\rizenguo\.m2\repository\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar;C:\Users\rizenguo\.m2\repository\junit\junit\4.8.2\junit-4.8.2.jar;C:\Users\rizenguo\.m2\repository\commons-codec\commons-codec\1.6\commons-codec-1.6.jar;C:\Users\rizenguo\.m2\repository\org\apache\httpcomponents\fluent-hc\4.3.5\fluent-hc-4.3.5.jar;C:\Users\rizenguo\.m2\repository\org\apache\httpcomponents\httpclient\4.3.5\httpclient-4.3.5.jar;C:\Users\rizenguo\.m2\repository\org\apache\httpcomponents\httpclient-cache\4.3.5\httpclient-cache-4.3.5.jar;C:\Users\rizenguo\.m2\repository\org\apache\httpcomponents\httpcore\4.3.2\httpcore-4.3.2.jar;C:\Users\rizenguo\.m2\repository\org\apache\httpcomponents\httpmime\4.3.5\httpmime-4.3.5.jar;C:\Users\rizenguo\.m2\repository\xmlpull\xmlpull\1.1.3.1\xmlpull-1.1.3.1.jar;C:\Users\rizenguo\.m2\repository\xpp3\xpp3\1.1.4c\xpp3-1.1.4c.jar;C:\Users\rizenguo\.m2\repository\com\thoughtworks\xstream\xstream\1.4.7\xstream-1.4.7.jar;C:\Users\rizenguo\.m2\repository\xpp3\xpp3_min\1.1.4c\xpp3_min-1.1.4c.jar;C:\Users\rizenguo\.m2\repository\com\tencent\wxpay-scanpay-java-sdk\1.0.1\wxpay-scanpay-java-sdk-1.0.1.jar;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="50.0"/>
     <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
@@ -41,7 +41,7 @@
     <property name="java.specification.version" value="1.6"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="user.name" value="rizenguo"/>
-    <property name="java.class.path" value="C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\target\test-classes;C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\target\classes;C:\Users\rizenguo\.m2\repository\org\slf4j\slf4j-api\1.7.7\slf4j-api-1.7.7.jar;C:\Users\rizenguo\.m2\repository\org\slf4j\slf4j-simple\1.7.7\slf4j-simple-1.7.7.jar;C:\Users\rizenguo\.m2\repository\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar;C:\Users\rizenguo\.m2\repository\junit\junit\4.8.2\junit-4.8.2.jar;C:\Users\rizenguo\.m2\repository\commons-codec\commons-codec\1.6\commons-codec-1.6.jar;C:\Users\rizenguo\.m2\repository\org\apache\httpcomponents\fluent-hc\4.3.5\fluent-hc-4.3.5.jar;C:\Users\rizenguo\.m2\repository\org\apache\httpcomponents\httpclient\4.3.5\httpclient-4.3.5.jar;C:\Users\rizenguo\.m2\repository\org\apache\httpcomponents\httpclient-cache\4.3.5\httpclient-cache-4.3.5.jar;C:\Users\rizenguo\.m2\repository\org\apache\httpcomponents\httpcore\4.3.2\httpcore-4.3.2.jar;C:\Users\rizenguo\.m2\repository\org\apache\httpcomponents\httpmime\4.3.5\httpmime-4.3.5.jar;C:\Users\rizenguo\.m2\repository\xmlpull\xmlpull\1.1.3.1\xmlpull-1.1.3.1.jar;C:\Users\rizenguo\.m2\repository\xpp3\xpp3\1.1.4c\xpp3-1.1.4c.jar;C:\Users\rizenguo\.m2\repository\com\thoughtworks\xstream\xstream\1.4.7\xstream-1.4.7.jar;C:\Users\rizenguo\.m2\repository\xpp3\xpp3_min\1.1.4c\xpp3_min-1.1.4c.jar;C:\Users\rizenguo\.m2\repository\com\tencent\wxpay-scanpay-java-sdk\1.0.0\wxpay-scanpay-java-sdk-1.0.0.jar;"/>
+    <property name="java.class.path" value="C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\target\test-classes;C:\MySVN\MyGit\wxpay_scanpay_java_demo_proj\target\classes;C:\Users\rizenguo\.m2\repository\org\slf4j\slf4j-api\1.7.7\slf4j-api-1.7.7.jar;C:\Users\rizenguo\.m2\repository\org\slf4j\slf4j-simple\1.7.7\slf4j-simple-1.7.7.jar;C:\Users\rizenguo\.m2\repository\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar;C:\Users\rizenguo\.m2\repository\junit\junit\4.8.2\junit-4.8.2.jar;C:\Users\rizenguo\.m2\repository\commons-codec\commons-codec\1.6\commons-codec-1.6.jar;C:\Users\rizenguo\.m2\repository\org\apache\httpcomponents\fluent-hc\4.3.5\fluent-hc-4.3.5.jar;C:\Users\rizenguo\.m2\repository\org\apache\httpcomponents\httpclient\4.3.5\httpclient-4.3.5.jar;C:\Users\rizenguo\.m2\repository\org\apache\httpcomponents\httpclient-cache\4.3.5\httpclient-cache-4.3.5.jar;C:\Users\rizenguo\.m2\repository\org\apache\httpcomponents\httpcore\4.3.2\httpcore-4.3.2.jar;C:\Users\rizenguo\.m2\repository\org\apache\httpcomponents\httpmime\4.3.5\httpmime-4.3.5.jar;C:\Users\rizenguo\.m2\repository\xmlpull\xmlpull\1.1.3.1\xmlpull-1.1.3.1.jar;C:\Users\rizenguo\.m2\repository\xpp3\xpp3\1.1.4c\xpp3-1.1.4c.jar;C:\Users\rizenguo\.m2\repository\com\thoughtworks\xstream\xstream\1.4.7\xstream-1.4.7.jar;C:\Users\rizenguo\.m2\repository\xpp3\xpp3_min\1.1.4c\xpp3_min-1.1.4c.jar;C:\Users\rizenguo\.m2\repository\com\tencent\wxpay-scanpay-java-sdk\1.0.1\wxpay-scanpay-java-sdk-1.0.1.jar;"/>
     <property name="java.vm.specification.version" value="1.0"/>
     <property name="sun.arch.data.model" value="32"/>
     <property name="java.home" value="C:\Program Files (x86)\Java\jdk1.6.0_20\jre"/>
@@ -61,18 +61,149 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
   </properties>
-  <testcase time="0.033" classname="com.tencent.business.ScanPayBusinessTest" name="testCase1"/>
-  <testcase time="0.174" classname="com.tencent.business.ScanPayBusinessTest" name="testCase2"/>
-  <testcase time="0.027" classname="com.tencent.business.ScanPayBusinessTest" name="testCase3"/>
-  <testcase time="6.276" classname="com.tencent.business.ScanPayBusinessTest" name="testCase4"/>
-  <testcase time="6.384" classname="com.tencent.business.ScanPayBusinessTest" name="testCase5"/>
-  <testcase time="5.751" classname="com.tencent.business.ScanPayBusinessTest" name="testCase6"/>
-  <testcase time="5.035" classname="com.tencent.business.ScanPayBusinessTest" name="testCase7"/>
-  <testcase time="5.057" classname="com.tencent.business.ScanPayBusinessTest" name="testCase8"/>
-  <testcase time="0.024" classname="com.tencent.business.ScanPayBusinessTest" name="testCase10"/>
+  <testcase time="0.026" classname="com.tencent.business.ScanPayBusinessTest" name="testCase1"/>
+  <testcase time="0.197" classname="com.tencent.business.ScanPayBusinessTest" name="testCase2"/>
+  <testcase time="0.021" classname="com.tencent.business.ScanPayBusinessTest" name="testCase3"/>
+  <testcase time="24.878" classname="com.tencent.business.ScanPayBusinessTest" name="testCase4"/>
+  <testcase time="5.917" classname="com.tencent.business.ScanPayBusinessTest" name="testCase5">
+    <failure message="expected:&lt;...n_fail_by_auth_code_[expire]&gt; but was:&lt;...n_fail_by_auth_code_[invalid]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;...n_fail_by_auth_code_[expire]&gt; but was:&lt;...n_fail_by_auth_code_[invalid]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:123)
+	at org.junit.Assert.assertEquals(Assert.java:145)
+	at com.tencent.business.ScanPayBusinessTest.testCase5(ScanPayBusinessTest.java:170)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runNotIgnored(BlockJUnit4ClassRunner.java:79)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:71)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:115)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at $Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+</failure>
+    <system-err>[main] INFO com.tencent.business.ScanPayBusiness - 支付API返回的数据如下：
+[main] INFO com.tencent.common.Util - API，POST过去的数据是：（by HttpsRequestForTest）
+[main] INFO com.tencent.common.Util - &lt;com.tencent.protocol.pay_protocol.ScanPayReqData&gt;
+  &lt;appid&gt;wx3ce7a2f3b32885dd&lt;/appid&gt;
+  &lt;mch_id&gt;1226736202&lt;/mch_id&gt;
+  &lt;device_info&gt;GRZ的测试机&lt;/device_info&gt;
+  &lt;nonce_str&gt;pjby7y3q052lnwmq8jmccipqpgpduu9r&lt;/nonce_str&gt;
+  &lt;sign&gt;BDFCB96E398FDCF63EEAEFA04F05010D&lt;/sign&gt;
+  &lt;body&gt;微信支付JavaSDK测试：ScanPayBusinessDemo&lt;/body&gt;
+  &lt;attach&gt;微信支付JavaSDK测试：ScanPayBusinessDemo，为了跑通支付全流程&lt;/attach&gt;
+  &lt;out_trade_no&gt;20150630152033&lt;/out_trade_no&gt;
+  &lt;total_fee&gt;1&lt;/total_fee&gt;
+  &lt;spbill_create_ip&gt;127.0.0.1&lt;/spbill_create_ip&gt;
+  &lt;time_start&gt;20150630152033&lt;/time_start&gt;
+  &lt;time_expire&gt;20150710152033&lt;/time_expire&gt;
+  &lt;goods_tag&gt;&lt;/goods_tag&gt;
+  &lt;auth_code&gt;dfgdfg&lt;/auth_code&gt;
+  &lt;sdk_version&gt;java sdk 1.0.1&lt;/sdk_version&gt;
+&lt;/com.tencent.protocol.pay_protocol.ScanPayReqData&gt;
+[main] INFO com.tencent.common.Util - executing requestPOST https://api.mch.weixin.qq.com/pay/micropay HTTP/1.1
+[main] INFO com.tencent.business.ScanPayBusiness - api请求总耗时：413ms
+[main] INFO com.tencent.business.ScanPayBusiness - &lt;xml&gt;&lt;return_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/return_code&gt;
+&lt;return_msg&gt;&lt;![CDATA[OK]]&gt;&lt;/return_msg&gt;
+&lt;appid&gt;&lt;![CDATA[wx3ce7a2f3b32885dd]]&gt;&lt;/appid&gt;
+&lt;mch_id&gt;&lt;![CDATA[1226736202]]&gt;&lt;/mch_id&gt;
+&lt;device_info&gt;&lt;![CDATA[GRZ的测试机]]&gt;&lt;/device_info&gt;
+&lt;nonce_str&gt;&lt;![CDATA[NbwPcaU3ASMFxLRG]]&gt;&lt;/nonce_str&gt;
+&lt;sign&gt;&lt;![CDATA[56A042619CB69CC929D4B1AA9F9F1930]]&gt;&lt;/sign&gt;
+&lt;result_code&gt;&lt;![CDATA[FAIL]]&gt;&lt;/result_code&gt;
+&lt;err_code&gt;&lt;![CDATA[AUTHCODEEXPIRE]]&gt;&lt;/err_code&gt;
+&lt;err_code_des&gt;&lt;![CDATA[请扫描微信支付被扫条码/二维码]]&gt;&lt;/err_code_des&gt;
+&lt;/xml&gt;
+[main] INFO com.tencent.business.ScanPayBusiness - pay+report总耗时（异步方式上报）：415ms
+[main] INFO com.tencent.business.ScanPayBusiness - 支付API系统成功返回数据
+[main] INFO com.tencent.common.Util - {result_code=FAIL, sign=56A042619CB69CC929D4B1AA9F9F1930, mch_id=1226736202, err_code=AUTHCODEEXPIRE, err_code_des=请扫描微信支付被扫条码/二维码, return_msg=OK, appid=wx3ce7a2f3b32885dd, nonce_str=NbwPcaU3ASMFxLRG, return_code=SUCCESS, device_info=GRZ的测试机}
+[main] INFO com.tencent.common.Util - 服务器回包里面的签名是:56A042619CB69CC929D4B1AA9F9F1930
+[main] INFO com.tencent.common.Util - 恭喜，API返回的数据签名验证通过!!!
+[main] INFO com.tencent.business.ScanPayBusiness - 业务返回失败
+[main] INFO com.tencent.business.ScanPayBusiness - err_code:AUTHCODEEXPIRE
+[main] INFO com.tencent.business.ScanPayBusiness - err_code_des:请扫描微信支付被扫条码/二维码
+[Thread-21] INFO com.tencent.common.Util - API，POST过去的数据是：
+[Thread-21] INFO com.tencent.common.Util - &lt;com.tencent.common.report.protocol.ReportReqData&gt;
+  &lt;appid&gt;wx3ce7a2f3b32885dd&lt;/appid&gt;
+  &lt;mch_id&gt;1226736202&lt;/mch_id&gt;
+  &lt;sub_mch_id&gt;&lt;/sub_mch_id&gt;
+  &lt;device_info&gt;GRZ的测试机&lt;/device_info&gt;
+  &lt;nonce_str&gt;3rjyoucnkmnres3tptvgc7n50pha7gk8&lt;/nonce_str&gt;
+  &lt;sign&gt;B30E49D40BCC8D8106E97A0B0ACC47A3&lt;/sign&gt;
+  &lt;interface_url&gt;https://api.mch.weixin.qq.com/pay/micropay&lt;/interface_url&gt;
+  &lt;execute_time_cost&gt;413&lt;/execute_time_cost&gt;
+  &lt;user_ip&gt;127.0.0.1&lt;/user_ip&gt;
+  &lt;return_code&gt;SUCCESS&lt;/return_code&gt;
+  &lt;return_msg&gt;OK&lt;/return_msg&gt;
+  &lt;result_code&gt;FAIL&lt;/result_code&gt;
+  &lt;err_code&gt;AUTHCODEEXPIRE&lt;/err_code&gt;
+  &lt;err_code_des&gt;请扫描微信支付被扫条码/二维码&lt;/err_code_des&gt;
+  &lt;sdk_version&gt;java sdk 1.0.1&lt;/sdk_version&gt;
+&lt;/com.tencent.common.report.protocol.ReportReqData&gt;
+[Thread-21] INFO com.tencent.common.Util - executing requestPOST https://api.mch.weixin.qq.com/payitil/report HTTP/1.1
+[Thread-21] INFO com.tencent.common.Util -    report返回的数据：&lt;xml&gt;
+&lt;return_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/return_code&gt;
+&lt;return_msg&gt;&lt;![CDATA[]]&gt;&lt;/return_msg&gt;
+&lt;result_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/result_code&gt;
+&lt;err_code&gt;&lt;![CDATA[0]]&gt;&lt;/err_code&gt;
+&lt;err_code_des&gt;&lt;![CDATA[褰撳墠浣跨敤姝や笟鍔＄殑鐢ㄦ埛杩囧锛岃绋嶅悗鍐嶈瘯銆俔]&gt;&lt;/err_code_des&gt;
+&lt;/xml&gt;
+[main] INFO com.tencent.common.Util - API，POST过去的数据是：（by HttpsRequestForTest）
+[main] INFO com.tencent.common.Util - &lt;com.tencent.protocol.reverse_protocol.ReverseReqData&gt;
+  &lt;appid&gt;wx3ce7a2f3b32885dd&lt;/appid&gt;
+  &lt;mch_id&gt;1226736202&lt;/mch_id&gt;
+  &lt;transaction_id&gt;&lt;/transaction_id&gt;
+  &lt;out_trade_no&gt;20150630152033&lt;/out_trade_no&gt;
+  &lt;nonce_str&gt;5se3q9tjlegjwkvselvm6b0jgvtqggcs&lt;/nonce_str&gt;
+  &lt;sign&gt;FA56D68BFD5DA6108FFC15577013BE7A&lt;/sign&gt;
+  &lt;sdk_version&gt;java sdk 1.0.1&lt;/sdk_version&gt;
+&lt;/com.tencent.protocol.reverse_protocol.ReverseReqData&gt;
+[main] INFO com.tencent.common.Util - executing requestPOST https://api.mch.weixin.qq.com/secapi/pay/reverse HTTP/1.1
+[main] INFO com.tencent.business.ScanPayBusiness - 撤销API返回的数据如下：
+[main] INFO com.tencent.business.ScanPayBusiness - &lt;xml&gt;&lt;return_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/return_code&gt;
+&lt;return_msg&gt;&lt;![CDATA[OK]]&gt;&lt;/return_msg&gt;
+&lt;appid&gt;&lt;![CDATA[wx3ce7a2f3b32885dd]]&gt;&lt;/appid&gt;
+&lt;mch_id&gt;&lt;![CDATA[1226736202]]&gt;&lt;/mch_id&gt;
+&lt;nonce_str&gt;&lt;![CDATA[9iY0or9mBJeyPCI1]]&gt;&lt;/nonce_str&gt;
+&lt;sign&gt;&lt;![CDATA[C3DBA4E309CE13878506496831CDA25E]]&gt;&lt;/sign&gt;
+&lt;result_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/result_code&gt;
+&lt;recall&gt;&lt;![CDATA[N]]&gt;&lt;/recall&gt;
+&lt;/xml&gt;
+[main] INFO com.tencent.common.Util - {result_code=SUCCESS, sign=C3DBA4E309CE13878506496831CDA25E, mch_id=1226736202, recall=N, return_msg=OK, appid=wx3ce7a2f3b32885dd, nonce_str=9iY0or9mBJeyPCI1, return_code=SUCCESS}
+[main] INFO com.tencent.common.Util - 服务器回包里面的签名是:C3DBA4E309CE13878506496831CDA25E
+[main] INFO com.tencent.common.Util - 恭喜，API返回的数据签名验证通过!!!
+[main] INFO com.tencent.business.ScanPayBusiness - 支付订单撤销成功
+[main] WARN com.tencent.business.ScanPayBusiness - 【支付扣款明确失败】原因是：请扫描微信支付被扫条码/二维码
+</system-err>
+  </testcase>
+  <testcase time="5.461" classname="com.tencent.business.ScanPayBusinessTest" name="testCase6"/>
+  <testcase time="5.052" classname="com.tencent.business.ScanPayBusinessTest" name="testCase7"/>
+  <testcase time="5.056" classname="com.tencent.business.ScanPayBusinessTest" name="testCase8"/>
+  <testcase time="0.027" classname="com.tencent.business.ScanPayBusinessTest" name="testCase10"/>
   <testcase time="5.027" classname="com.tencent.business.ScanPayBusinessTest" name="testCase11"/>
   <testcase time="0.022" classname="com.tencent.business.ScanPayBusinessTest" name="testGetCouponDataFromPayQueryString"/>
-  <testcase time="0.01" classname="com.tencent.business.ScanPayBusinessTest" name="testGetSignature"/>
-  <testcase time="0.68" classname="com.tencent.business.ScanPayBusinessTest" name="testReverse"/>
-  <testcase time="0.663" classname="com.tencent.business.ScanPayBusinessTest" name="testScanPayQuery"/>
+  <testcase time="0.009" classname="com.tencent.business.ScanPayBusinessTest" name="testGetSignature"/>
+  <testcase time="0.477" classname="com.tencent.business.ScanPayBusinessTest" name="testReverse"/>
+  <testcase time="0.478" classname="com.tencent.business.ScanPayBusinessTest" name="testScanPayQuery"/>
 </testsuite>

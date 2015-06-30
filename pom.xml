@@ -6,7 +6,7 @@
 
     <groupId>com.tencent.weixin.scanpaydemo</groupId>
     <artifactId>wxpay-scanpay-java-demo</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
 
     <build>
         <plugins>
@@ -129,7 +129,7 @@
         <dependency>
             <groupId>com.tencent</groupId>
             <artifactId>wxpay-scanpay-java-sdk</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
 
     </dependencies>

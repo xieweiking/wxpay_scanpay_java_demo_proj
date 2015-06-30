@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: com.tencent:wxpay-scanpay-java-sdk:1.0.1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/tencent/wxpay-scanpay-java-sdk/1.0.1/wxpay-scanpay-java-sdk-1.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/tencent/wxpay-scanpay-java-sdk/1.0.1/wxpay-scanpay-java-sdk-1.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/tencent/wxpay-scanpay-java-sdk/1.0.1/wxpay-scanpay-java-sdk-1.0.1-sources.jar!/" />
+      <root url="file://$PROJECT_DIR$/../wxpay_scanpay_java_sdk_proj/src/main/java" />
+    </SOURCES>
+  </library>
+</component>
