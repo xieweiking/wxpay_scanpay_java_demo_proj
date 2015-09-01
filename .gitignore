@@ -46,3 +46,7 @@ Temporary Items
 .svn/wc.db
 .idea/workspace.xml
 .idea/workspace.xml
+/target/
+/.settings/
+/.classpath
+/.project
